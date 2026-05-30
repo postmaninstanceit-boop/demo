@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Large Hadron Collider — Editorial Vocabulary · May 25, 2026</title>
+<style>
+:root{
+  --ink:#1c1a16;--paper:#f8f4ec;--cream:#f0ebe0;--rule:#d4cfc4;
+  --gold:#a07830;--gold-lt:#c8a050;--red:#8c2020;
+  --green-bg:#eaf3e0;--green-brd:#8cba60;--green-txt:#2a5a10;
+  --red-bg:#fce8e8;--red-brd:#e09090;--red-txt:#7a1818;
+  --blue-bg:#e8f0fc;--blue-brd:#90aadd;--blue-txt:#1a3a7a;
+  --muted:#7a7468;
+  --serif:Georgia,'Times New Roman',serif;
+  --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.75}
+
+.masthead{background:var(--ink);color:var(--paper);padding:14px 0;border-bottom:3px solid var(--gold)}
+.masthead-inner{max-width:880px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.brand{font-family:var(--serif);font-size:22px;letter-spacing:1px;font-weight:700}
+.brand span{color:var(--gold-lt)}
+.masthead-right{text-align:right}
+.masthead-right .ce{color:var(--gold-lt);font-size:13px;font-weight:600;letter-spacing:1px}
+.masthead-right .sub{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#a09880;margin-top:2px}
+.container{max-width:880px;margin:0 auto;padding:0 20px 80px}
+.article-header{padding:40px 0 28px;border-bottom:2px solid var(--ink);margin-bottom:32px}
+.article-kicker{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.article-title{font-family:var(--serif);font-size:clamp(24px,5vw,42px);line-height:1.2;font-weight:700;color:var(--ink);margin-bottom:16px}
+.article-byline{display:flex;align-items:center;gap:12px;font-size:13px;color:var(--muted);flex-wrap:wrap}
+.article-byline strong{color:var(--ink)}
+.dot{width:4px;height:4px;border-radius:50%;background:var(--rule);display:inline-block}
+.section-head{display:flex;align-items:center;gap:12px;margin-bottom:20px;margin-top:40px}
+.section-head h2{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--ink)}
+.section-head::after{content:'';flex:1;height:1px;background:var(--rule)}
+.snum{width:32px;height:32px;background:var(--ink);color:var(--paper);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:14px;font-weight:700;flex-shrink:0}
+.article-body{background:white;border:1px solid var(--rule);border-radius:4px;padding:28px 32px;margin-bottom:8px}
+.article-body-label{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.read-note{font-size:13px;color:var(--muted);font-style:italic;margin-bottom:20px;padding:10px 14px;background:var(--cream);border-radius:3px;border-left:3px solid var(--gold);line-height:1.6}
+.article-body h3{font-family:var(--serif);font-size:16px;font-weight:700;color:var(--ink);margin:24px 0 10px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.article-body p{font-family:var(--serif);font-size:15px;line-height:1.9;color:var(--ink);margin-bottom:14px}
+.article-body p:last-child{margin-bottom:0}
+.lede{font-size:17px;font-weight:700;font-family:var(--serif);color:var(--ink);margin-bottom:16px;line-height:1.6;font-style:italic}
+.vh{background:#fff8e8;border-bottom:2px solid var(--gold-lt);cursor:pointer;position:relative}
+.vh.phrase{background:#eef4ff;border-bottom:2px solid var(--blue-brd)}
+.vh.active{background:#ffefc0}
+.vh.phrase.active{background:#d8e8ff}
+.vt{display:none;position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--ink);color:#f0ebe0;font-family:var(--sans);font-size:12px;padding:7px 11px;border-radius:4px;z-index:200;line-height:1.5;min-width:200px;max-width:260px;text-align:center;pointer-events:none;white-space:normal}
+.vt::after{content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:var(--ink)}
+.vh.active .vt,.vh:hover .vt{display:block}
+.legend{display:flex;gap:16px;margin-bottom:16px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+.legend-item{display:flex;align-items:center;gap:6px}
+.legend-dot{width:12px;height:4px;border-radius:2px}
+.facts-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:8px}
+.fact-card{background:white;border:1px solid var(--rule);border-top:3px solid var(--gold);border-radius:3px;padding:14px 16px}
+.fact-num{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--gold);line-height:1}
+.fact-label{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.4}
+.vocab-tabs{display:flex;gap:0;border-bottom:1px solid var(--rule);margin-bottom:20px}
+.vtab{padding:9px 20px;font-size:13px;cursor:pointer;border:none;background:none;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-1px;font-family:var(--sans);font-weight:500;transition:all .15s}
+.vtab.on{color:var(--ink);border-bottom-color:var(--gold)}
+.word-card{background:white;border:1px solid var(--rule);border-radius:3px;padding:16px 20px;margin-bottom:10px}
+.word-card.type-word{border-left:4px solid var(--gold)}
+.word-card.type-phrase{border-left:4px solid var(--blue-brd)}
+.word-top{display:flex;align-items:baseline;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.wword{font-family:var(--serif);font-size:19px;font-weight:700;color:var(--ink)}
+.wnum{font-size:11px;color:var(--muted);font-weight:600;min-width:22px}
+.wpos{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.wtag{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;padding:2px 7px;border-radius:2px}
+.wtag.word{background:#fff3d4;color:var(--gold)}
+.wtag.phrase{background:var(--blue-bg);color:var(--blue-txt)}
+.wen{font-size:14px;color:var(--ink);margin-bottom:4px}
+.whi{font-size:13px;color:var(--muted);margin-bottom:6px}
+.whi strong{color:var(--red)}
+.wex{font-size:13px;font-style:italic;color:#5a5248;line-height:1.6;padding-left:12px;border-left:2px solid var(--rule);margin-bottom:10px}
+.sa-row{display:flex;gap:8px;flex-wrap:wrap}
+.sa-box{flex:1;min-width:130px;padding:8px 12px;border-radius:3px;font-size:12px}
+.syn-box{background:var(--green-bg);border:1px solid var(--green-brd)}
+.ant-box{background:var(--red-bg);border:1px solid var(--red-brd)}
+.sim-box{background:var(--blue-bg);border:1px solid var(--blue-brd)}
+.sa-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:3px}
+.syn-box .sa-label{color:var(--green-txt)}.ant-box .sa-label{color:var(--red-txt)}.sim-box .sa-label{color:var(--blue-txt)}
+.syn-box .sa-terms{color:#1e4a08}.ant-box .sa-terms{color:#5a1010}.sim-box .sa-terms{color:#1a3a7a}
+.quiz-wrap{background:white;border:1px solid var(--rule);border-radius:4px;padding:24px 28px;margin-bottom:8px}
+.quiz-meta{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
+.q-block{margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid var(--rule)}
+.q-block:last-of-type{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.q-text{font-size:14px;line-height:1.7;margin-bottom:10px;color:var(--ink)}
+.q-num{font-family:var(--serif);font-size:17px;font-weight:700;color:var(--gold);margin-right:5px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.opt{background:var(--paper);border:1px solid var(--rule);border-radius:3px;padding:10px 13px;font-family:var(--sans);font-size:13px;color:var(--ink);cursor:pointer;text-align:left;transition:all .15s;line-height:1.4}
+.opt:hover:not(:disabled){border-color:var(--gold);background:#fffbf4}
+.opt.ok{background:var(--green-bg);border-color:var(--green-brd);color:var(--green-txt);font-weight:600}
+.opt.no{background:var(--red-bg);border-color:var(--red-brd);color:var(--red-txt)}
+.opt:disabled{cursor:default}
+.score-box{display:none;margin-top:20px;padding:20px;background:var(--cream);border-radius:4px;text-align:center}
+.score-big{font-family:var(--serif);font-size:52px;font-weight:700;color:var(--gold);display:block;line-height:1}
+.score-msg{font-size:14px;color:var(--muted);margin-top:8px}
+.article-footer{border-top:2px solid var(--ink);padding-top:20px;margin-top:40px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px}
+.footer-brand{font-family:var(--serif);font-size:16px;font-weight:700;color:var(--muted)}
+.footer-brand span{color:var(--gold)}
+.footer-note{font-size:11px;color:var(--muted);letter-spacing:1px;margin-top:3px}
+.wa-float{position:fixed;bottom:24px;right:20px;z-index:1000;display:flex;align-items:center;gap:10px;background:#25D366;color:white;border:none;border-radius:50px;padding:12px 20px 12px 16px;font-family:var(--sans);font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 4px 16px rgba(37,211,102,0.4);transition:all .2s;text-decoration:none}
+.wa-float:hover{background:#20c05a;transform:translateY(-2px)}
+.wa-float svg{flex-shrink:0}
+@media(max-width:600px){
+  .opts{grid-template-columns:1fr}
+  .article-body,.quiz-wrap{padding:18px 16px}
+  .facts-row{grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
+  .vt{min-width:160px;max-width:220px}
+  .wa-float{padding:12px 16px 12px 14px;font-size:13px;bottom:16px;right:14px}
+}
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead-inner">
+    <div class="brand">Editorial <span>Vocab</span></div>
+    <div class="masthead-right">
+      <div class="ce">Career Express</div>
+      <div class="sub">Daily Word Power · Competitive Exams</div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="article-header">
+    <div class="article-kicker">Science &amp; Technology · Physics · May 25, 2026</div>
+    <h1 class="article-title">The World's Largest Particle Accelerator — and Its Even Bigger Successor</h1>
+    <div class="article-byline">
+      <span><strong>By Kevin Montien</strong></span>
+      <span class="dot"></span>
+      <span>Science Feature</span>
+      <span class="dot"></span>
+      <span>May 25, 2026</span>
+    </div>
+  </div>
+
+  <div class="section-head"><div class="snum">1</div><h2>Read the Article</h2></div>
+  <div class="article-body">
+    <div class="article-body-label">Full Article · Science Feature · May 25, 2026</div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:var(--gold-lt)"></div>Vocabulary word</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--blue-brd)"></div>Phrase / idiom</div>
+    </div>
+    <div class="read-note">Tap any highlighted word or phrase to see its meaning. Read the full article before attempting the quiz.</div>
+
+    <p class="lede">With a 17-mile ring buried as deep as 574 feet under the French-Swiss border, the world's largest particle accelerator is an underground "city" built to push physics to its limit.</p>
+
+    <p>Buried beneath the French-Swiss border, CERN's Large Hadron Collider (LHC) is already a machine that <span class="vh phrase" onclick="toggleTip(this)">sounds almost fictional<span class="vt">Phrase: "sounds almost fictional" — so extraordinary it is difficult to believe it is real</span></span>. Its nearly 17-mile ring of <span class="vh" onclick="toggleTip(this)">superconducting<span class="vt">Superconducting (adj.) — conducting electricity with zero resistance at very low temperatures</span></span> magnets pushes protons to 99.9999991% of the speed of light before smashing them together at four major collision points.</p>
+    <p>Now, the machine that found the Higgs boson is pointing toward an even bigger question. CERN has completed a <span class="vh" onclick="toggleTip(this)">feasibility<span class="vt">Feasibility (n.) — the state of being possible or practical to achieve</span></span> report for the Future Circular Collider (FCC), a proposed 56-mile underground accelerator that could <span class="vh" onclick="toggleTip(this)">probe<span class="vt">Probe (v.) — to investigate or explore something deeply and thoroughly</span></span> parts of the universe the Standard Model still cannot explain.</p>
+
+    <h3>The Cold Machine Under Europe</h3>
+    <p>The LHC uses a ring of superconducting magnets in a tunnel with an average depth of 328 feet underground near Geneva. To make that possible, the magnets must be kept at 1.9 kelvin — about minus 456 degrees Fahrenheit. That is colder than outer space, and it is why the LHC is as much an engineering story as a physics story.</p>
+
+    <h3>Why Smash Protons?</h3>
+    <p>Collisions let scientists briefly <span class="vh" onclick="toggleTip(this)">recreate<span class="vt">Recreate (v.) — to reproduce extreme conditions from the earliest moments of the universe</span></span> conditions similar to those that existed in the earliest moments of the universe. At its current <span class="vh" onclick="toggleTip(this)">nominal<span class="vt">Nominal (adj.) — existing in name or as a stated reference value; officially designated</span></span> proton collision energy of 13.6 TeV, the LHC can produce short-lived particles that vanish almost instantly but leave traces in giant detectors. The best-known result came in July 2012, when the Higgs boson was discovered — confirming the final predicted piece of the Standard Model.</p>
+
+    <h3>The Universe Still Has Missing Pages</h3>
+    <p>The Higgs discovery was not the end of the story. In some ways, it <span class="vh phrase" onclick="toggleTip(this)">sharpened the mystery<span class="vt">Phrase: "sharpen the mystery" — to make a question more focused rather than resolving it</span></span>. CERN notes that the Standard Model explains only about 5% of the universe. It does not account for dark matter, the speeding expansion linked to dark energy, or why matter survived over <span class="vh" onclick="toggleTip(this)">antimatter<span class="vt">Antimatter (n.) — matter composed of antiparticles; when it meets ordinary matter, both are annihilated</span></span> after the Big Bang.</p>
+    <p>That is the <span class="vh phrase" onclick="toggleTip(this)">awkward part<span class="vt">Phrase: "the awkward part" — the uncomfortable truth that complicates an otherwise positive situation</span></span>. The LHC delivered one of modern science's greatest confirmations, but the universe still <span class="vh phrase" onclick="toggleTip(this)">refuses to hand over most of its recipe<span class="vt">Phrase — the universe withholds its fundamental rules; a metaphor for unanswered scientific questions</span></span>.</p>
+
+    <h3>A 56-Mile Successor</h3>
+    <p>The feasibility report describes a preferred 56.4-mile ring at an average depth of about 656 feet. The plan has two stages. First, FCC-ee would study the Higgs boson with extreme <span class="vh" onclick="toggleTip(this)">precision<span class="vt">Precision (n.) — the quality of being exact, accurate, and careful in detail</span></span>. Later, FCC-hh would collide protons at around 100 TeV — far beyond today's LHC energy.</p>
+
+    <h3>The Money and the Footprint</h3>
+    <p>CERN's report estimates the construction cost of the FCC electron-positron stage at roughly $19 billion. CERN says any new project should be an example of <span class="vh" onclick="toggleTip(this)">sustainable<span class="vt">Sustainable (adj.) — able to be maintained without depleting resources or harming the environment</span></span> research infrastructure, with <span class="vh" onclick="toggleTip(this)">ecodesign<span class="vt">Ecodesign (n.) — designing products with minimal environmental impact throughout their lifecycle</span></span> principles and energy reuse. For a machine this large, the electric bill and the climate math <span class="vh phrase" onclick="toggleTip(this)">cannot be side notes<span class="vt">Phrase: "cannot be side notes" — cannot be treated as minor concerns; must be central to the discussion</span></span>.</p>
+
+    <h3>What Happens Next</h3>
+    <p>The FCC is not approved yet. A decision on construction is expected around 2028. The European Strategy Group has recommended the electron-positron FCC as the preferred next <span class="vh" onclick="toggleTip(this)">flagship<span class="vt">Flagship (n./adj.) — the most important or leading example in a group</span></span> collider at CERN. For now, the LHC keeps doing what it was built to do — it turns invisible particles into evidence, and <span class="vh phrase" onclick="toggleTip(this)">evidence into better questions<span class="vt">Phrase — each discovery raises deeper questions; science as a continuous process</span></span>.</p>
+  </div>
+
+  <div class="facts-row">
+    <div class="fact-card"><div class="fact-num">17 mi</div><div class="fact-label">Length of LHC's underground ring</div></div>
+    <div class="fact-card"><div class="fact-num">99.999%</div><div class="fact-label">Speed of light protons reach in LHC</div></div>
+    <div class="fact-card"><div class="fact-num">56 mi</div><div class="fact-label">Proposed ring size of FCC successor</div></div>
+    <div class="fact-card"><div class="fact-num">$19B</div><div class="fact-label">Estimated construction cost of FCC</div></div>
+    <div class="fact-card"><div class="fact-num">5%</div><div class="fact-label">Universe explained by Standard Model</div></div>
+    <div class="fact-card"><div class="fact-num">2028</div><div class="fact-label">Expected year of FCC construction decision</div></div>
+  </div>
+
+  <div class="section-head"><div class="snum">2</div><h2>Words &amp; Phrases from the Article</h2></div>
+  <div class="vocab-tabs">
+    <button class="vtab on" onclick="switchVTab('all')">All (15)</button>
+    <button class="vtab" onclick="switchVTab('words')">Words (10)</button>
+    <button class="vtab" onclick="switchVTab('phrases')">Phrases (5)</button>
+  </div>
+  <div id="wordGrid"></div>
+
+  <div class="section-head"><div class="snum">3</div><h2>Reading Comprehension Quiz</h2></div>
+  <div class="quiz-wrap">
+    <div class="quiz-meta">10 Questions · SSC / IBPS PO / UPSC Level</div>
+    <div id="quizContainer"></div>
+    <div class="score-box" id="scoreBox">
+      <span class="score-big" id="scoreBig"></span>
+      <div class="score-msg" id="scoreMsg"></div>
+    </div>
+  </div>
+
+  <div class="article-footer">
+    <div>
+      <div class="footer-brand">Editorial <span>Vocab</span></div>
+      <div style="font-size:12px;color:var(--muted);margin-top:4px;">Vocabulary exercise prepared by <strong style="color:var(--ink)">Career Express</strong></div>
+      <div style="font-size:12px;color:var(--muted);margin-top:2px;">📞 <a href="tel:9586766655" style="color:var(--gold);text-decoration:none;">9586766655</a></div>
+    </div>
+    <div style="text-align:right;">
+      <div class="footer-note">For educational use only</div>
+      <div class="footer-note" style="margin-top:3px;">Competitive Exam Preparation</div>
+    </div>
+  </div>
+</div>
+
+<a class="wa-float" id="waBtn" href="#" target="_blank" rel="noopener">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.534 5.857L.057 23.116a.75.75 0 00.918.899l5.421-1.438A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.696 9.696 0 01-4.964-1.364l-.355-.212-3.686.977.991-3.62-.232-.372A9.699 9.699 0 012.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/>
+  </svg>
+  Share on WhatsApp
+</a>
+
+<script>
+// TOOLTIP
+function toggleTip(el){
+  document.querySelectorAll('.vh.active').forEach(function(e){if(e!==el)e.classList.remove('active');});
+  el.classList.toggle('active');
+}
+document.addEventListener('click',function(e){
+  if(!e.target.closest('.vh'))document.querySelectorAll('.vh.active').forEach(function(e){e.classList.remove('active');});
+});
+
+// WHATSAPP
+(function(){
+  var btn=document.getElementById('waBtn');
+  var url=window.location.href;
+  var msg=encodeURIComponent('📚 Today\'s Vocab by Career Express\n\nThe World\'s Largest Particle Accelerator — Science Vocabulary!\n\nRead · Learn 15 words & phrases · Take the Quiz!\n\n👉 '+url+'\n\n📞 Career Express: 9586766655');
+  btn.href='https://wa.me/?text='+msg;
+})();
+
+// WORD & PHRASE DATA
+var allItems=[
+  {type:'word',word:"Superconducting",pos:"adjective",en:"Conducting electricity with zero resistance, typically at very low temperatures.",hi:"<strong>अतिचालक</strong> — बिना प्रतिरोध के विद्युत प्रवाहित करने वाला",ex:"Superconducting cables are used in MRI machines to generate powerful magnetic fields without energy loss.",syn:["zero-resistance","lossless","ultra-conductive"],ant:["resistive","insulating","conventional"]},
+  {type:'word',word:"Feasibility",pos:"noun",en:"The state of being possible, practical, or achievable.",hi:"<strong>व्यवहार्यता</strong> — किसी काम के संभव या व्यावहारिक होने की स्थिति",ex:"The government commissioned a feasibility study before approving the new metro rail corridor.",syn:["practicability","viability","possibility"],ant:["impossibility","impracticability","unfeasibility"]},
+  {type:'word',word:"Probe",pos:"verb",en:"To investigate or explore something deeply and thoroughly.",hi:"<strong>जांच करना</strong> — गहराई से खोजना या छानबीन करना",ex:"Scientists use satellites to probe the outer layers of the atmosphere for signs of climate change.",syn:["investigate","explore","examine"],ant:["ignore","overlook","neglect"]},
+  {type:'word',word:"Nominal",pos:"adjective",en:"Existing in name or as a stated reference value; officially designated.",hi:"<strong>नाममात्र का</strong> — नाम के लिए या संदर्भ मूल्य के रूप में",ex:"The nominal speed of the train is 160 km/h, though it rarely reaches that in practice.",syn:["designated","stated","reference"],ant:["actual","real","effective"]},
+  {type:'word',word:"Antimatter",pos:"noun",en:"Matter composed of antiparticles; when it meets ordinary matter, both are completely annihilated.",hi:"<strong>प्रतिपदार्थ</strong> — वह पदार्थ जो साधारण पदार्थ से टकराने पर नष्ट हो जाता है",ex:"The collision between matter and antimatter releases enormous amounts of energy.",syn:["antiparticle matter","mirror matter","opposite matter"],ant:["ordinary matter","baryonic matter","matter"]},
+  {type:'word',word:"Precision",pos:"noun",en:"The quality of being exact, accurate, and careful in measurement or detail.",hi:"<strong>सटीकता</strong> — बिल्कुल सही और बारीक होने का गुण",ex:"Surgical precision is essential when operating near the brain or spinal cord.",syn:["accuracy","exactness","meticulousness"],ant:["imprecision","vagueness","approximation"]},
+  {type:'word',word:"Sustainable",pos:"adjective",en:"Able to be maintained long-term without depleting resources or harming the environment.",hi:"<strong>टिकाऊ</strong> — पर्यावरण को नुकसान पहुंचाए बिना लंबे समय तक चलने वाला",ex:"The company switched to sustainable packaging to reduce its plastic waste.",syn:["eco-friendly","renewable","viable"],ant:["unsustainable","wasteful","destructive"]},
+  {type:'word',word:"Ecodesign",pos:"noun",en:"Designing products or infrastructure with minimal environmental impact throughout their lifecycle.",hi:"<strong>पर्यावरण-अनुकूल डिज़ाइन</strong> — पर्यावरण को ध्यान में रखकर किया गया डिज़ाइन",ex:"The new stadium incorporated ecodesign features including rainwater harvesting and solar panels.",syn:["green design","sustainable design","environmental design"],ant:["conventional design","wasteful design","non-green design"]},
+  {type:'word',word:"Flagship",pos:"noun / adjective",en:"The most important, leading, or most prominent example within a group or organisation.",hi:"<strong>प्रमुख / अग्रणी</strong> — किसी समूह का सबसे महत्वपूर्ण उदाहरण",ex:"The new hospital is the government's flagship project in healthcare infrastructure.",syn:["leading","premier","primary"],ant:["minor","secondary","peripheral"]},
+  {type:'word',word:"Annihilate",pos:"verb",en:"To destroy something completely; in physics, to convert matter into energy on collision with antimatter.",hi:"<strong>नष्ट करना</strong> — पूरी तरह से मिटा देना",ex:"A single asteroid large enough to annihilate an entire city struck the region 66 million years ago.",syn:["destroy","obliterate","eradicate"],ant:["create","preserve","build"]},
+  {type:'phrase',word:"Sounds almost fictional",pos:"phrase",en:"So extraordinary or remarkable that it is difficult to believe it is actually real.",hi:"<strong>लगभग काल्पनिक लगना</strong> — इतना अविश्वसनीय कि वास्तविक न लगे",ex:"The idea of a computer fitting in your pocket sounded almost fictional just fifty years ago.",sim:["beyond belief","hard to imagine","stranger than fiction"]},
+  {type:'phrase',word:"Sharpened the mystery",pos:"phrase",en:"Made a question or puzzle more acute and focused rather than resolving it.",hi:"<strong>रहस्य को और गहरा करना</strong> — समाधान के बजाय सवाल को और पैना बना देना",ex:"The discovery of dark matter's effects sharpened the mystery of what it actually is.",sim:["deepened the question","intensified the puzzle","raised more questions"]},
+  {type:'phrase',word:"Cannot be side notes",pos:"phrase",en:"Cannot be treated as minor or secondary concerns; must be given central importance.",hi:"<strong>हाशिये पर नहीं रखा जा सकता</strong> — इसे मामूली नहीं समझा जा सकता",ex:"In climate negotiations, the interests of developing nations cannot be side notes.",sim:["must be central","cannot be ignored","demand full attention"]},
+  {type:'phrase',word:"Refuses to hand over its recipe",pos:"phrase",en:"A metaphor meaning the universe withholds its fundamental rules and secrets from scientists.",hi:"<strong>रहस्य उजागर न करना</strong> — ब्रह्मांड अपने मूल नियम वैज्ञानिकों से छुपाए रखता है",ex:"Nature refuses to hand over its recipe easily — every answer in science opens ten new questions.",sim:["keeps its secrets","withholds the truth","remains unexplained"]},
+  {type:'phrase',word:"Evidence into better questions",pos:"phrase",en:"Each discovery generates deeper, more refined questions — science as a continuous process.",hi:"<strong>साक्ष्य से बेहतर सवाल उठाना</strong> — हर खोज नए और गहरे सवाल पैदा करती है",ex:"Good research turns evidence into better questions, which is how knowledge advances.",sim:["raises deeper questions","fuels further inquiry","advances understanding"]}
+];
+
+var quiz=[
+  {q:"What is the approximate average depth of the LHC tunnel near Geneva?",opts:["100 feet","200 feet","328 feet","574 feet"],ans:2},
+  {q:"The word 'feasibility' as used in the article most nearly means:",opts:["The cost of a project","The practicability of doing something","The timeline of construction","The environmental impact"],ans:1},
+  {q:"The phrase 'sharpened the mystery' means the Higgs discovery:",opts:["Solved all unanswered questions in physics","Made the remaining questions more focused and acute","Proved the Standard Model was complete","Confirmed dark matter exists"],ans:1},
+  {q:"According to the article, the Standard Model explains what percentage of the universe?",opts:["50%","25%","15%","5%"],ans:3},
+  {q:"The word 'flagship' in the article refers to:",opts:["A naval research vessel used by CERN","The most prominent and important collider project","A type of particle discovered in the LHC","The tunnel boring machine used for construction"],ans:1},
+  {q:"The phrase 'cannot be side notes' means:",opts:["Environmental concerns must be central to the FCC project","Scientists should write side notes during experiments","The electric bill is too small to matter","Climate data should be published separately"],ans:0},
+  {q:"What does 'superconducting' mean as used in the article?",opts:["Conducting heat at high temperatures","Conducting electricity with zero resistance at very low temperatures","A type of radioactive material","A method of accelerating particles"],ans:1},
+  {q:"When is a decision on FCC construction expected?",opts:["2026","2027","2028","2040s"],ans:2},
+  {q:"The word 'probe' as used in the article means:",opts:["A physical instrument inserted into a tunnel","To ignore and set aside","To investigate or explore deeply","To build a new accelerator"],ans:2},
+  {q:"'Evidence into better questions' at the end of the article suggests that:",opts:["The LHC has answered all questions","Science advances by raising deeper questions from discoveries","The FCC will replace the need for the LHC","Particle physics is nearly complete"],ans:1}
+];
+
+// VOCAB TAB SWITCHING
+function switchVTab(tab){
+  document.querySelectorAll('.vtab').forEach(function(b,i){b.classList.toggle('on',['all','words','phrases'][i]===tab);});
+  var show=tab==='all'?allItems:tab==='words'?allItems.filter(function(i){return i.type==='word';}):allItems.filter(function(i){return i.type==='phrase';});
+  renderItems(show);
+}
+
+function renderItems(items){
+  document.getElementById('wordGrid').innerHTML=items.map(function(w,i){
+    var saHTML=w.type==='word'
+      ?'<div class="sa-box syn-box"><div class="sa-label">✦ Synonyms</div><div class="sa-terms">'+w.syn.join(', ')+'</div></div><div class="sa-box ant-box"><div class="sa-label">✦ Antonyms</div><div class="sa-terms">'+w.ant.join(', ')+'</div></div>'
+      :'<div class="sa-box sim-box"><div class="sa-label">✦ Similar expressions</div><div class="sa-terms">'+w.sim.join(', ')+'</div></div>';
+    return '<div class="word-card type-'+w.type+'">'
+      +'<div class="word-top"><span class="wnum">'+String(i+1).padStart(2,'0')+'</span><span class="wword">'+w.word+'</span><span class="wpos">'+w.pos+'</span><span class="wtag '+w.type+'">'+(w.type==='word'?'Word':'Phrase')+'</span></div>'
+      +'<div class="wen">📌 '+w.en+'</div>'
+      +'<div class="whi">🇮🇳 Hindi: '+w.hi+'</div>'
+      +'<div class="wex">"'+w.ex+'"</div>'
+      +'<div class="sa-row">'+saHTML+'</div>'
+      +'</div>';
+  }).join('');
+}
+renderItems(allItems);
+
+// QUIZ
+var qDone=0, qScores={};
+document.getElementById('quizContainer').innerHTML=quiz.map(function(q,i){
+  return '<div class="q-block" id="qb'+i+'">'
+    +'<div class="q-text"><span class="q-num">Q'+(i+1)+'.</span>'+q.q+'</div>'
+    +'<div class="opts">'+q.opts.map(function(o,oi){
+      return '<button class="opt" onclick="ansQ('+i+','+oi+','+q.ans+')"><strong>'+['A','B','C','D'][oi]+'.</strong> '+o+'</button>';
+    }).join('')+'</div>'
+    +'</div>';
+}).join('');
+
+function ansQ(qi,chosen,correct){
+  var b=document.getElementById('qb'+qi);
+  if(b.dataset.done)return;
+  b.dataset.done='1';
+  b.querySelectorAll('.opt').forEach(function(btn,i){
+    btn.disabled=true;
+    if(i===correct)btn.classList.add('ok');
+    else if(i===chosen)btn.classList.add('no');
+  });
+  qScores[qi]=chosen===correct;
+  qDone++;
+  if(qDone>=quiz.length){
+    var sc=Object.values(qScores).filter(Boolean).length;
+    var sb=document.getElementById('scoreBox');sb.style.display='block';
+    document.getElementById('scoreBig').textContent=sc+' / '+quiz.length;
+    var msgs=['Keep practising daily.','Good effort! Revise the ones you missed.','Well done! Strong performance.','Outstanding! Perfect score.'];
+    document.getElementById('scoreMsg').textContent=msgs[sc<5?0:sc<7?1:sc<10?2:3];
+    sb.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+}
+</script>
+</body>
+</html>
